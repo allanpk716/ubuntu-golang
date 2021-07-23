@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		libc6-dev \
 		make \
 		pkg-config \
+		wget \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV PATH /usr/local/go/bin:$PATH
@@ -29,10 +30,6 @@ RUN set -eux; \
 		'arm64') \
 			url='https://dl.google.com/go/go1.15.14.linux-arm64.tar.gz'; \
 			sha256='84e483d1ec7dae591f28f218485f8f67877412e24b8cea626bebf25b6d299c7f'; \
-			;; \
-		'i386') \
-			url='https://dl.google.com/go/go1.15.14.linux-386.tar.gz'; \
-			sha256='0216746103b8da20b23f91a86795bcf72e12428b2d07dfd3279a14b070ceaa74'; \
 			;; \
 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; \
 	esac; \
