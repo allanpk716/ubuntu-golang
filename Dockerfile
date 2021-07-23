@@ -22,9 +22,6 @@ RUN set -eux; \
 			url='https://dl.google.com/go/go1.15.14.linux-amd64.tar.gz'; \
 			sha256='6f5410c113b803f437d7a1ee6f8f124100e536cc7361920f7e640fedf7add72d'; \
 			;; \
-		'armel') \
-			export GOARCH='arm' GOARM='5' GOOS='linux'; \
-			;; \
 		'armhf') \
 			url='https://dl.google.com/go/go1.15.14.linux-armv6l.tar.gz'; \
 			sha256='a40fe975caf82daef311e22902eb4aeda1f0bd63a782c1ebd81911abed6c187b'; \
@@ -36,17 +33,6 @@ RUN set -eux; \
 		'i386') \
 			url='https://dl.google.com/go/go1.15.14.linux-386.tar.gz'; \
 			sha256='0216746103b8da20b23f91a86795bcf72e12428b2d07dfd3279a14b070ceaa74'; \
-			;; \
-		'mips64el') \
-			export GOARCH='mips64le' GOOS='linux'; \
-			;; \
-		'ppc64el') \
-			url='https://dl.google.com/go/go1.15.14.linux-ppc64le.tar.gz'; \
-			sha256='e17c29518940885d9f4a2e02f63c922d1c2537e8c2cb68617f0ec84aaf7635ca'; \
-			;; \
-		's390x') \
-			url='https://dl.google.com/go/go1.15.14.linux-s390x.tar.gz'; \
-			sha256='cfe577ab8f7d779e45b2cb3a93062f7e5552e509d6e0c3e389bbfd6001ee4fe4'; \
 			;; \
 		*) echo >&2 "error: unsupported architecture '$dpkgArch' (likely packaging update needed)"; exit 1 ;; \
 	esac; \
