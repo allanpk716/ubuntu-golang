@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export https_proxy=http://172.17.0.1:7890 http_proxy=http://172.17.0.1:7890 all_proxy=socks5://172.17.0.1:7891
-
 # Check CPU architecture
 ARCH=$(uname -m)
 echo -e "${INFO} Check CPU architecture ..."
