@@ -15,5 +15,5 @@ else
 fi
 
 # download go
-wget -c https://mirrors.ustc.edu.cn/golang/go${GO_VER}.linux-${ARCH}.tar.gz -O - | tar -xz -C /usr/local
-# wget -c https://golang.org/dl/go${GO_VER}linux-${ARCH}.tar.gz -O - | tar -xz -C /usr/local
+# wget -c https://mirrors.ustc.edu.cn/golang/go${GO_VER}.linux-${ARCH}.tar.gz -O - | tar -xz -C /usr/local
+wget -c https://golang.org/dl/go${GO_VER}linux-${ARCH}.tar.gz -O - | tar -xz -C /usr/local
