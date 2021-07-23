@@ -17,4 +17,4 @@ fi
 https://golang.org/dl/go1.15.14.linux-armv6l.tar.gz
 # download go
 # wget -c https://mirrors.ustc.edu.cn/golang/go${GO_VER}.linux-${ARCH}.tar.gz -O - | tar -xz -C /usr/local
-wget -c https://golang.org/dl/go${GO_VER}.linux-${ARCH}.tar.gz -O - | tar -xz -C /usr/local
+wget --no-check-certificate -c https://golang.org/dl/go${GO_VER}.linux-${ARCH}.tar.gz -O - | tar -xz -C /usr/local
