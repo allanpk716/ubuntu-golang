@@ -38,6 +38,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            superng6/go:ubuntu-focal-${{ steps.set-version.outputs.version }}
-            superng6/go:latest
+            allanpk716/go:ubuntu-focal-${{ steps.set-version.outputs.version }}
+            allanpk716/go:latest
 
